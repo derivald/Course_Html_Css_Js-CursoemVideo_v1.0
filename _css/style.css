@@ -133,6 +133,42 @@ nav.menu a:hover{
     padding: right 15px;
     margin-right: 15px;
 }
+.tabelaspec{
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tabelaspec td{
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align:right ;
+    vertical-align: middle;
+}
+.colunaesq{
+    color: #ffffff;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold;
+}
+.colunadir{
+    background-color: #cecece ;
+
+}
+table.tabelaspec caption{
+
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+
+}
+.tabelaspec caption span{
+    display: block;
+    float: right;
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
 .lateral{
     display: block;
     width: 340px;
