@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tudo Sobre Google Glass</title>
     <link rel="stylesheet" type="text/css" href="/_css/style.css">
+    <link rel="stylesheet" href="_css/form.css">
    <script lang="javascript" src="_javascript/funcoes.js"></script>
   
 </head>
@@ -39,46 +40,87 @@
 <article id="noticia-principal">
     <header id="cabecalho-do-artigo">
 
-<h3>Tecnologia Inovações</h3>
-<h1>Saiba tudo sobre o Google Glass.</h1>
+<h3>Fale Conosco > Contato</h3>
+<h1>Formulário de Contato</h1>
 <h2>por Gustavo Guanabara.</h2>
-<h3 class="direita">Atualizado em 23/Abril/2013.</h3>
+<h3 class="direita">Atualizado em 01/Maio/2013</h3>
 </header>
 
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
-
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
-
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
-
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
-
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
 
 
-[BOTÃO ENVIAR]
 
+
+<form method="post" id="fContado" action="mailto:contato@cursoemvideo.com">
+    
+  <fieldset id="usuario">
+       <legend> Identificação do Usuário</legend>
+          <p> <label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome completo">
+        </p>
+          <p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="senha">
+        </p>
+          <p><label for="cEmail">E-mail:</label> <input type="email" name="tEmail" id="cEmail" size="20" maxlength="40" placeholder="email">
+        </p> 
+                       
+            <fieldset id="sexo">
+                <legend>Sexo:</legend>
+                    <input type="radio" name="tSexo" id="cMasc" checked> <label for="cMasc">Masculino</label><br>
+                    <input type="radio" name="tSexo" id="cFem"><label for="cFem">Feminino</label>
+            </fieldset>
+            <p><label for="cNasc">Data de Nascimento:</label>  <input type="date" name="tNasc" id="cNasc"> </p>
+            
+  </fieldset>
+    
+   <fieldset id="endereco">
+        <legend>Endereço do Usuário</legend>
+            <p><label for="cRua">Logradouro:</label><input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av, Trav, ..."> 
+            </p>
+            <p><label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum" min="1" max="99999"> </p>
+           <p><label for="cEst"> Estado:</label> <select name="tEst" id="cEst">
+            <optgroup label="Região Sudeste">
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SP" selected>São Paulo</option>
+                <option value="MG">Minas Gerais</option>
+            </optgroup>
+
+          <optgroup label="Região Sul">
+                <option value="PR">Paraná</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="RJ">Rio Grande do Sul</option>
+          </optgroup>
+           </select> </p>
+            <p><label for="cCid">Cidade:</label>
+            <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"></p>
+            <datalist id="cidades">
+                <option value="Rio de Janeiro"></option>
+                <option value="Nova Iguaçu"></option>
+                <option value="Niterói"></option>
+                <option value="Belford Roxo"></option>
+            </datalist>
+   </fieldset>
+    
+    <fieldset id="mensagem">
+        <legend>Mensagem do Usuário</legend>
+           <p> <label for="cUrg">Grau de Urgência:</label>
+       Min <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"> Máx</p>
+            <p><label for="cMsg">Mensagem:</label>
+            <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+    </fieldset>
+    
+    <fieldset id="pedido">
+        <legend>Quero um Google Glass</legend>
+            Gostaria de adquirir um Google Glass quando disponível
+            Cor:
+            Quantidade:
+            Preço Total: R$
+        
+    </fieldset>
+    
+    [BOTÃO ENVIAR]
+</form>
+
+</article>
+</section>
 <footer id="rodape">
     <p></p>&copy;Copyright 2022 - by Derivaldo Brito<br>
     <a href="https://github.com/derivald" target="_blank">Github</a>|<a href="https://www.linkedin.com/in/derivaldo-silva-dev-engenharia-petroleo-supervisao" target="_blank">Linkedin</a></p>
