@@ -8,6 +8,13 @@
     <link rel="stylesheet" type="text/css" href="/_css/style.css">
     <link rel="stylesheet" href="_css/form.css">
    <script lang="javascript" src="_javascript/funcoes.js"></script>
+   <script>
+    function calc_total(){
+        var qtd = parseInt(document.querySelector('#cQtd').value)
+        total = qtd * 1500
+        document.getElementById("cTot").value = total
+    }
+   </script>
   
 </head>
 <body>
@@ -51,7 +58,7 @@
 
 
 
-<form method="post" id="fContado" action="mailto:contato@cursoemvideo.com">
+<form method="post" id="fContado" action="mailto:contato@cursoemvideo.com" oninput="calc_total();">
     
   <fieldset id="usuario">
        <legend> Identificação do Usuário</legend>
@@ -104,19 +111,24 @@
            <p> <label for="cUrg">Grau de Urgência:</label>
        Min <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"> Máx</p>
             <p><label for="cMsg">Mensagem:</label>
-            <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+            <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
     </fieldset>
     
     <fieldset id="pedido">
         <legend>Quero um Google Glass</legend>
-            Gostaria de adquirir um Google Glass quando disponível
-            Cor:
-            Quantidade:
-            Preço Total: R$
+          <p><input type="checkbox" name="tPed" id="cPed" checked>  
+            <label for="cPed">Gostaria de adquirir um Google Glass quando disponível?</label></p>
+            <p><label for="cCor">Cor:</label>
+            <input type="color" name="tCor" id="cCor" value="#0000ff"></p>
+            <p><label for="cQtd">Quantidade:</label>
+            <input type="number" name="tQtd" id="cQtd" min="0" max="5"></label></p>
+            <p><label for="cTot">Preço Total: R$</label>
+            <input type="text" name="tTot" id="cTot" readonly></p>
         
     </fieldset>
     
-    [BOTÃO ENVIAR]
+    
+    <input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
 </form>
 
 </article>
